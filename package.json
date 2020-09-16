@@ -38,12 +38,12 @@
     "csurf": "1.10.0",
     "errorhandler": "1.5.1",
     "express": "4.17.1",
-    "express-fileupload": "^0.4.0",
+    "express-fileupload": "^1.1.10",
     "express-session": "^1.15.6",
-    "flat": "^2.0.1",
+    "flat": "^5.0.2",
     "gridfs-stream": "^1.1.1",
-    "json2csv": "^3.7.1",
-    "lodash": "~4.17.4",
+    "json2csv": "^4.0.0",
+    "lodash": "~4.17.20",
     "method-override": "^2.3.10",
     "mongodb": "^3.5.5",
     "mongodb-query-parser": "^2.0.2",
@@ -51,7 +51,8 @@
     "patch-package": "^6.2.0",
     "serve-favicon": "^2.5.0",
     "swig-templates": "2.0.3",
-    "update-notifier": "1.0.2"
+    "update-notifier": "2.0.0",
+    "snyk": "^1.398.0"
   },
   "devDependencies": {
     "assets-webpack-plugin": "^3.5.1",
@@ -94,10 +95,12 @@
     "test": "npm run mocha && npm run lint",
     "mocha": "cross-env NODE_ENV=test mocha",
     "test-watch": "cross-env NODE_ENV=test mocha --watch --reporter spec",
-    "prepublish": "npm run build"
+    "prepublish": "yarn run snyk-protect && npm run build",
+    "snyk-protect": "snyk protect"
   },
   "pre-commit": [
     "test"
   ],
-  "main": "./middleware"
+  "main": "./middleware",
+  "snyk": true
 }
