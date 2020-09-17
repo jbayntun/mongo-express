@@ -51,7 +51,7 @@
     "patch-package": "^6.2.0",
     "serve-favicon": "^2.5.0",
     "swig-templates": "2.0.3",
-    "update-notifier": "2.0.0",
+    "update-notifier": "2.5.0",
     "snyk": "^1.398.0"
   },
   "devDependencies": {
