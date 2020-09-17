@@ -52,7 +52,7 @@
     "serve-favicon": "^2.5.0",
     "swig-templates": "2.0.3",
     "update-notifier": "2.0.0",
-    "snyk": "^1.398.0"
+    "snyk": "^1.398.1"
   },
   "devDependencies": {
     "assets-webpack-plugin": "^3.5.1",
